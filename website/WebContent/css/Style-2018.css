@@ -1,0 +1,70 @@
+
+asa{background: #38569f;}
+
+
+.containerEdirInfo {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	width:500px;
+    text-align:center;
+    margin-bottom:200px;
+}
+
+
+
+
+.formLogin h1{
+	margin: 0 0 20px;
+	color: #ffffff;
+	font-size:30px;
+	text-transform: uppercase;
+}
+.EditInfoStyle label{
+	margin-left:10px;
+	
+}
+.EditInfoStyle input{
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	outline: none;se
+	font-size: 14px;
+	letter-spacing: 1px;
+    border: 1px solid #888;
+	color:#89888a;
+	background: rgba(255,255,255,.5);
+}
+
+
+.EditInfoStyle input[type="submit"]{
+	color: #fff;
+	background: #b0a339;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+
+}
+.EditInfoStyle input[type="submit"]:hover {
+		background: #9e9445;
+}
+.EditInfoStyle input::placeholder{
+	color:#ceced1;
+}
+.user {
+	margin: 0 0 20px;
+	color: #ffffff;
+	font-size:30px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	padding: 10px 60px;
+	transition: .5s;	
+}
+.user:hover {
+	background: rgba(255,255,255,.1);
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+}

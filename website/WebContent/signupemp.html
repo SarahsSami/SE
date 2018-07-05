@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+  Document   : sign up for employee
+    Created on : Nov 30, 2016, 9:13:42 AM
+    Author     : noura & nada
+Input:employees information.
+Output: there should be a message appear to user "your information has been successfully sent to coordinator".
+Purpose: to have an account in order to be able to sign in.
+-->
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<script type="text/javascript">
+function validation_for_signup()
+{
+
+      
+                var check_ID 
+                                if(document.signup.ID.value=="")
+                                {
+                                                alert("please enter Email");
+                                                document.signup.ID.focus();
+                                                return false;
+                                }
+                               
+                                if(document.signup.password.value=='')
+                                {
+                                                alert("Please enter Password.");
+                                                document.signup.password.focus();
+                                                return false;
+                                }
+                                else if(document.signup.password.value.length<6)
+                                {
+                                                alert("Password is too short.");
+                                                document.signup.password.focus();
+                                                return false;
+                                }
+                                if(document.signup.passconf.value=='')
+                                {
+                                                alert("Please confirm Password.");
+                                                document.signup.passconf.focus();
+                                                return false;
+                                }
+                                else if(document.signup.password.value!=document.signup.passconf.value)
+                                {
+                                                alert("Password does not match.");
+                                                document.signup.password.focus();
+                                                return false;
+                                }
+                               
+}
+
+
+</script>
+  <style>
+form {
+    border: 3px solid black;
+    
+    background: url("employees.jpg");
+    background-size: 1510px 790px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+
+input[type=text], input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: lightblue;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: solid white;
+    cursor: pointer;
+    width: 10%;
+    
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+</style>
+
+</head>
+
+<body>
+<br/>
+        <a href="index2.html"><img src="kacst.png" style="width:120px;height:70px;"></a>
+
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+<center> <h1 style="font-family: Castellar"><b> Employee sign up form </b></h1> </center>
+ <br/>
+ <br/>
+ <br/>
+<form name="signup" action="" onSubmit="return validation_for_signup()" method="post">
+
+<ul>
+
+<li style="list-style-type: none">
+    <br/>
+    <p style="color:black;"><b>Enter E-mail: </b></p>
+    <p><input type="text" name="ID" value="" size="50" placeholder="E-mail" /></p></li>
+
+
+<li style="list-style-type: none"><p style="color:black;"><b>Password:</b></p>
+<p><input type="password" name="password"  value="" size="50" placeholder="Password"/></p></li>
+
+<li style="list-style-type: none;">
+    <p style="color:black;"><b>Confirm password:</b></p>
+<p><input type="password" name="passconf"  value="" size="50" placeholder="confirm Password"/></p></li>
+
+
+</ul>
+   
+    <center>
+    <p><button type="submit" />Submit</button></p>
+</center> 
+    
+</form>
+ 
+ <center>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     
+ <footer>
+     Copyright &copy; KACST ECP 2017
+ </footer>
+     </center>
+</body>
+</html>

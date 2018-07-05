@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Document:Career
+Author:Nada AlNetaifi
+Input: write the user's information as request and submit
+Output: it should be message appear said "Thanks for your interest to applying job in our organization, your request will take under consideration and we will inform you soon, Thank you" then the form should be sent to the HR coordinator's email by SMTP
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+ 
+    <!--KACST logo -->    <a href="index2.html"> <img src="kacst.png" alt="logo" style="width:100px;height:70px;"> </a>
+        
+    
+    <!-- Job application form -->
+  <center><div style="padding-bottom: 18px;"><h1>Job Application</h1></div></center>
+  <img src="interview.jpg" style="width:1500px; height:650px"/>
+  <br/>
+  <br/>
+  <br/>
+ <form method="post" action="" onSubmit="return validateForm();">
+<div style="width: 400px;">
+</div>
+   
+    <div style="padding-bottom: 18px;font-size : 18px; color:blue;"><b>Contact Information</b></div>
+    <br/>
+    
+<div style="display: flex; padding-bottom: 18px;width : 450px;">
+<div style=" margin-left : 0; margin-right : 1%; width : 49%;">First name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_3" name="data_3" style="width: 100%;" class="form-control"/>
+</div>
+<div style=" margin-left : 1%; margin-right : 0; width : 49%;">Last name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_4" name="data_4" style="width: 100%;" class="form-control"/>
+</div>
+</div><div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br/>
+<input type="text" id="data_5" name="data_5" style="width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Phone<span style="color: red;"> *</span><br/>
+<input type="text" id="data_6" name="data_6" style="width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;font-size : 18px;">Position</div>
+<div style="padding-bottom: 18px;">Position you are applying for<span style="color: red;"> *</span><br/>
+<input type="text" id="data_8" name="data_8" style="width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Resume upload<br/>
+<input id="data_9" name="data_9" style="width : 450px;" type="file" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Portfolio website<br/>
+<input type="text" id="data_10" name="data_10" style="width : 450px;" class="form-control"/>
+</div>
+
+<div style="padding-bottom: 18px;">When can you start?<br/>
+<input type="text" id="data_12" name="data_12" style="width : 450px;" class="form-control"/>
+</div>
+
+
+<div style="padding-bottom: 18px;">Last company you worked for<br/>
+<input type="text" id="data_14" name="data_14" style="width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Comments<br/>
+<textarea  style="width : 450px;" rows="4"> </textarea> 
+</div>
+<center><input type="submit" style="background-color: #4CAF50; color:white; padding:14px 20px; margin:8px 0; border:none; cursor:pointer; width:10%;"></center>
+
+</form>
+ 
+  
+  
+  <!-- Java Script to show if the user forgot to fill the mandatory information like phone number, the pop up message said "phone is required"-->
+<script type="text/javascript">
+function validateForm() {
+if (isEmpty(document.getElementById('data_3').value.trim())) {
+alert('First name is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_4').value.trim())) {
+alert('Last name is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_5').value.trim())) {
+alert('Email is required!');
+return false;
+}
+if (!validateEmail(document.getElementById('data_5').value.trim())) {
+alert('Email must be a valid email address!');
+return false;
+}
+if (isEmpty(document.getElementById('data_6').value.trim())) {
+alert('Phone is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_8').value.trim())) {
+alert('Position you are applying for is required!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+</script>
+   <br/>
+
+</body>
+    
+</html>

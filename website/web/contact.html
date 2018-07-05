@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+Document: contact
+Author: Nada AlNetaifi
+Input: write the user's name, email, subject, and his/her message that they want if they have any inquiries 
+Output: there should be a message after the user click on send message that said "your inquiry successfully sent, we will response you soon", the the message will sent it to the contact coordinator's email (by SMTP) 
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="index2.html"> <img src="kacst.png" style="width:120px;height:70px;"> </a>    
+<!-- Contact Section -->
+<br/>
+<br/>
+<br/>
+<div class="w3-container w3-padding-128 w3-light-grey" id="contact">
+    <center><h1 class="w3-center" style="font-family: Castellar">CONTACT US</h1></center>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+  <div class="w3-col l3 m6">
+      <img src="cntct.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+    </div>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> King Abdulaziz City for Science and Technology Kingdom of Saudi Arabia</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i><b> Phone:</b> <br/> 00966114883555 - 00966114883444</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> KACST is located in the northern area of Riyadh, about 40 km away from King Khalid International Airport, on King Abdullah Road (West.) West of KACST is the campus of King Saud University.<br/> The main entrance is located on Prince Turkey Bin Abdulaziz (the First).</p>
+      <br>
+      <p class="w3-center w3-large">Lets get in touch, Send us a message !</p>
+      <form action="form.asp" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-btn w3-padding" type="submit">
+            <i class="fa fa-paper-plane"></i> Send message
+          </button>
+        </p>
+      </form>
+    </div>
+    
+  </div>
+</div>
+<br/>
+    <center><h2 style="color:blue; font-family: castellar"> Location: </h2> </center>
+    <br/>
+    <br/>
+<img src="map.jpg">
+ 
+<!-- Add Google Maps -->
+<!--
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidenav when clicking the menu icon
+var mySidenav = document.getElementById("mySidenav");
+
+function w3_open() {
+    if (mySidenav.style.display === 'block') {
+        mySidenav.style.display = 'none';
+    } else {
+        mySidenav.style.display = 'block';
+    }
+}
+
+// Close the sidenav with the close button
+function w3_close() {
+    mySidenav.style.display = "none";
+}
+</script>
+-->
+
+    </body>
+</html>
