@@ -41,11 +41,10 @@ href="design.css"/>
 
 <div>
 
-<div class="sidenav">
-<ul>
-  <li><a href="indexPM.jsp">Home Page</a></li>
-  <li><a href="create.jsp">Create Project</a></li>
-</ul>
+<div class="navbar">
+ <a href="Logout">Sign out</a>
+ <a href="indexPM.jsp">Home Page</a>
+
 </div>
 
 <!--view projects example -->
